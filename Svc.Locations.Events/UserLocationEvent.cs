@@ -14,6 +14,11 @@ public class UserLocationEvent
     public virtual Guid UserId { get; set; }
 
     /// <summary>
+    /// Created At.
+    /// </summary>
+    public virtual DateTimeOffset CreatedAt { get; set; }
+
+    /// <summary>
     /// Coordinate.
     /// </summary>
     public virtual Point Coordinate { get; set; } = null!;

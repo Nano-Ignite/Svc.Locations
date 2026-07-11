@@ -47,6 +47,7 @@ public class UserLocationsController(ILogger<UserLocationsController> logger, IR
             .PublishAsync(new UserLocationEvent
             {
                 UserId = userLocationCreated.UserId,
+                CreatedAt = userLocationCreated.CreatedAt,
                 Coordinate = userLocationCreated.Coordinate
             }, cancellationToken: cancellationToken);
 
