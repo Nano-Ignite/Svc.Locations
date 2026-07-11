@@ -38,7 +38,7 @@ env:
   KUBERNETES_CPU_SCALING: 180
   SQL_NAME: locationsDb
   SQL_USER: svc-locations-user
-  SQL_PASSWORD: ${{ github.ref == 'refs/heads/main' && secrets.PRODUCTION_SQL_SVC_PLACES_DB_PASSWORD || secrets.STAGING_SQL_SVC_PLACES_DB_PASSWORD }}
+  SQL_PASSWORD: ${{ github.ref == 'refs/heads/main' && secrets.PRODUCTION_SQL_SVC_LOCATIONS_DB_PASSWORD || secrets.STAGING_SQL_SVC_LOCATIONS_DB_PASSWORD }}
   SQL_ADMIN_PASSWORD: ${{ github.ref == 'refs/heads/main' && secrets.PRODUCTION_SQL_ADMIN_PASSWORD || secrets.STAGING_SQL_ADMIN_PASSWORD }}
   ASPNETCORE_ENVIRONMENT: ${{ github.ref == 'refs/heads/main' && 'Production' || 'Staging' }}
 concurrency:

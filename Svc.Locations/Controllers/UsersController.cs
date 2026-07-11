@@ -9,4 +9,4 @@ namespace Svc.Locations.Controllers;
 
 /// <inheritdoc />
 public class UsersController(ILogger<UsersController> logger, IRepository repository, IEventing eventing)
-    : BaseEntityController<User, UserQueryCriteria>(logger, repository, eventing);
+    : BaseEntityCreatableController<User, UserQueryCriteria>(logger, repository, eventing);

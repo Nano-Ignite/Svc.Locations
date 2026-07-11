@@ -41,8 +41,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".solution", ".solution", "{
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6AD972E1-DA85-48BD-9B2E-F120D7D4295A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Svc.Locations.Events", "Svc.Locations.Events\Svc.Locations.Events.csproj", "{C5D05CDD-CF27-3432-8B9C-92AA13C1890B}"
 EndProject
 Global
