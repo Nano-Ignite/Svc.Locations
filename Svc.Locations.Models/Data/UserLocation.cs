@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Nano.Data.Abstractions.Eventing.Annotations;
 using Nano.Data.Abstractions.Models;
 using NetTopologySuite.Geometries;
 
@@ -10,6 +11,7 @@ namespace Svc.Locations.Models.Data;
 /// <summary>
 /// User Location.
 /// </summary>
+[Publish(nameof(UserId), nameof(Coordinate))]
 public class UserLocation : BaseEntity
 {
     /// <summary>
