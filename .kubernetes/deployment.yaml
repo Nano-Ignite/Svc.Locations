@@ -15,7 +15,6 @@ spec:
     metadata:
       labels:
         app: %SERVICE_NAME%
-        azure.workload.identity/use: "true"
     spec:
       automountServiceAccountToken: false
       securityContext:
@@ -106,13 +105,8 @@ spec:
           initialDelaySeconds: 20
           timeoutSeconds: 2
         volumeMounts:
-        - name: %SERVICE_NAME%-volume
-          mountPath: /mnt/%STORAGE_SHARE_NAME%
         - name: tmp
           mountPath: /tmp
       volumes:
-      - name: %SERVICE_NAME%-volume
-        persistentVolumeClaim:
-          claimName: %SERVICE_NAME%-azurefile-pvc
       - name: tmp
         emptyDir: {}
